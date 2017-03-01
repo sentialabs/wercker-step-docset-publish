@@ -1,0 +1,28 @@
+name: docset-publish
+version: 0.0.0
+description: Package and Publish a Dash Docket on S3
+keywords:
+  - dash
+  - docset
+  - deploy
+  - publish
+  - s3
+properties:
+  docset:
+    type: string
+    required: true
+  bucket:
+    type: string
+    required: true
+  gemspec:
+    type: string
+    required: false
+  aws_access_key_id:
+    type: string
+    required: false
+  aws_secret_access_key:
+    type: string
+    required: false
+  aws_session_token:
+    type: string
+    required: false
