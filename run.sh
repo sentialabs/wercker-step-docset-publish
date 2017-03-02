@@ -109,8 +109,10 @@ EOF
       AWS_SESSION_TOKEN=$WERCKER_DOCSET_PUBLISH_AWS_SESSION_TOKEN
     fi
 
-    aws iam get-user
+    echo -n "AWS Credentials Identity:"
+    aws sts get-caller-identity --query Arn
 
+    echo "Uploading to S3..."
     aws s3 cp \
       --sse \
       --acl public-read \
