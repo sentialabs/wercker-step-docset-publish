@@ -109,6 +109,7 @@ EOF
       AWS_SESSION_TOKEN=$WERCKER_DOCSET_PUBLISH_AWS_SESSION_TOKEN
     fi
 
+    echo    "AWS Access Key: $AWS_ACCESS_KEY_ID ($WERCKER_DOCSET_PUBLISH_AWS_ACCESS_KEY_ID)"
     echo -n "AWS Credentials Identity:"
     aws sts get-caller-identity --query Arn
 
