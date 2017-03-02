@@ -113,9 +113,11 @@ EOF
     echo    "AWS_DEFAULT_PROFILE: $AWS_DEFAULT_PROFILE"
     echo -n "AWS Credentials Identity:"
     aws sts get-caller-identity --query Arn
+    aws iam get-user
 
     cat ~/.aws/config
     cat ~/.aws/credentials
+    env |grep -v SECRET
 
     echo "Uploading to S3..."
     aws s3 cp \
