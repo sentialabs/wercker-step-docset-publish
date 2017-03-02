@@ -109,6 +109,8 @@ EOF
       AWS_SESSION_TOKEN=$WERCKER_DOCSET_PUBLISH_AWS_SESSION_TOKEN
     fi
 
+    aws iam get-user
+
     aws s3 cp \
       --sse \
       --acl public-read \
