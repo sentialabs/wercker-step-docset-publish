@@ -28,7 +28,7 @@ main() {
   fi
 
   if [ ! -z "$WERCKER_DOCSET_PUBLISH_GEMSPEC" ]; then
-    if [ ! -d "$WERCKER_DOCSET_PUBLISH_GEMSPEC" ]; then
+    if [ ! -f "$WERCKER_DOCSET_PUBLISH_GEMSPEC" ]; then
       fail "gemspec: file not found '$WERCKER_DOCSET_PUBLISH_GEMSPEC'"
     fi
   fi

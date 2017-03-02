@@ -1,5 +1,5 @@
 name: docset-publish
-version: 0.0.0
+version: 0.0.1
 description: Package and Publish a Dash Docket on S3
 keywords:
   - dash
