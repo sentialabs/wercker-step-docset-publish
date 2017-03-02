@@ -110,8 +110,12 @@ EOF
     fi
 
     echo    "AWS Access Key: $AWS_ACCESS_KEY_ID ($WERCKER_DOCSET_PUBLISH_AWS_ACCESS_KEY_ID)"
+    echo    "AWS_DEFAULT_PROFILE: $AWS_DEFAULT_PROFILE"
     echo -n "AWS Credentials Identity:"
     aws sts get-caller-identity --query Arn
+
+    cat ~/.aws/config
+    cat ~/.aws/credentials
 
     echo "Uploading to S3..."
     aws s3 cp \
